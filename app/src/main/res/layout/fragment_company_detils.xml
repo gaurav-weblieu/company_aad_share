@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.CompanyDetils">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_round_arrow_back_ios_24"
+                    android:onClick="back"
+                    />
+
+                <ImageView
+                    android:onClick="send_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/spplash_app_icon" />
+
+                <ImageView
+                    android:id="@+id/share_compnay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toStartOf="@+id/notification_bell"
+                    android:src="@drawable/ic_round_share_24" />
+
+
+                <ImageView
+                    android:id="@+id/notification_bell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:onClick="noti"
+                    android:src="@drawable/ic_round_notifications_none_24"
+                    android:visibility="visible" />
+
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/ScrollLayout"
+        android:layout_width="match_parent"
+        android:background="@color/ver_light_grey"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="500dp"
+                android:src="@drawable/water_mark"
+                />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+
+      <ProgressBar
+          android:id="@+id/progress_bar"
+          style="?android:attr/progressBarStyleHorizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:indeterminate="true"
+          android:max="100"
+          android:visibility="gone"
+
+          android:progress="0" />
+
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_marginTop="10dp"
+              android:layout_height="wrap_content">
+
+              <androidx.cardview.widget.CardView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  app:cardCornerRadius="10dp">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_margin="10dp"
+                      android:orientation="vertical"
+                      android:layout_height="wrap_content">
+
+                      <RelativeLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:id="@+id/textView_name"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginEnd="70dp"
+                              android:textColor="@color/dark_blue"
+                              android:textSize="16sp"
+                              android:textStyle="bold" />
+
+                          <TextView
+                              android:id="@+id/textView_address"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/textView_name"
+                              android:layout_marginEnd="70dp"
+                              android:layout_marginBottom="10dp"
+                              android:textSize="12sp"
+                              android:textStyle="bold" />
+
+
+                          <ImageView
+                              android:id="@+id/imageView_refres_compnay"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_alignParentEnd="true"
+                              android:src="@drawable/ic_round_refresh_24" />
+
+
+
+                      </RelativeLayout>
+
+                      <TextView
+                          android:id="@+id/textView_detais1"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="12sp"
+                          android:textColor="@color/black"
+                         />
+
+                      <TextView
+                          android:id="@+id/textView_detais2"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="12sp"
+                          android:layout_marginTop="5dp"
+                          android:visibility="gone"
+                          android:textColor="@color/black"
+                         />
+
+                      <TextView
+                          android:id="@+id/textView_detais3"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="12sp"
+                          android:visibility="gone"
+                          android:layout_marginTop="5dp"
+                          android:textColor="@color/black"
+                         />
+
+
+
+                  </LinearLayout>
+
+              </androidx.cardview.widget.CardView>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_marginStart="15dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="COMPANY"
+                      android:textSize="16sp"
+                      android:textStyle="bold"
+                      android:textColor="@color/dark_blue"
+                      />
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="DETAILS"
+                      android:textSize="16sp"
+                      android:textStyle="bold"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/yellow"
+                      />
+
+              </LinearLayout>
+
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="15dp"
+                  android:layout_marginEnd="15dp"
+                  android:layout_marginTop="5dp"
+                  android:orientation="vertical">
+
+
+
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:text="CIN"
+                          android:textSize="12sp"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/textView_cin_no"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text=""
+                          android:layout_alignParentEnd="true"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Company Name"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_name_sec"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                         android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="ROC Code"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_roc"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:visibility="gone"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:text="Registration Number"
+                          android:textSize="12sp"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/textView_id"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text=""
+                          android:layout_alignParentEnd="true"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Company Category"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_cat"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Company Subcategory"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_sub_cat"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Class of Company"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_class"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Authorized Capital"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_auth_cap"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Paid up Capital"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_paid_cap"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Number Of Member"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_member"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+
+              <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_marginTop="10dp"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textSize="12sp"
+                  android:layout_height="wrap_content"
+                  android:text="Age of company"
+                  android:textColor="@color/black"
+                  />
+
+              <TextView
+                  android:id="@+id/company_time_stamp"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:textSize="12sp"
+                  android:textColor="@color/dark_blue"
+                  />
+
+          </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Date Of Registration"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_reg_date"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Register Address"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_reg_address"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Address Other Than RO"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_add_other_ro"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Email"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_email"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Listing Status"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_listing_status"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Active Compliance"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_active_com"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Suspended at Stock"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_susp_stock"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Date of last AGM"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_last_agm"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:visibility="gone"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Type Of Company"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_type"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+
+
+
+                 <!-- <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="State"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_state"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>-->
+
+                      <!--<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Activity Code"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_act_code"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>--> <!--<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Activity Description"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_act_des"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>-->   <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Balance Sheet Date"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_last_balancesheet"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Company Status"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_status"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:layout_marginStart="10dp"
+                          android:textColor="@android:color/holo_green_dark"
+                          />
+
+                  </LinearLayout>
+
+                  <!--<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Company Filling Status"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_fillting_status"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>-->   <!--<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Partners"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_partners"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout><LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="CIRP"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_cirp"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout><LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Status"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/status"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>&lt;!&ndash;<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Country"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_country"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>&ndash;&gt;&lt;!&ndash;<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="F Company share cap"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_f_share"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>&ndash;&gt;&lt;!&ndash;<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Type Of Office"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_type_of_office"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>&ndash;&gt;&lt;!&ndash;<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Foreign Details"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_for_det"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>&ndash;&gt;&lt;!&ndash;<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Pan"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_pan"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>&ndash;&gt;&lt;!&ndash;<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Get Data"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_get_data"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>&ndash;&gt;<LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Timestamp"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_time_stamp"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout><LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="File"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_file"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout><LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="10dp"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:textSize="12sp"
+                          android:layout_height="wrap_content"
+                          android:text="Updated"
+                          android:textColor="@color/black"
+                          />
+
+                      <TextView
+                          android:id="@+id/company_updated"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:textSize="12sp"
+                          android:textColor="@color/dark_blue"
+                          />
+
+                  </LinearLayout>
+
+
+-->
+              </LinearLayout>
+
+
+             <!-- <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:background="@color/yellow"
+                  />-->
+
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_marginStart="15dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="COMPANY"
+                      android:textSize="16dp"
+                      android:textStyle="bold"
+                      android:textColor="@color/dark_blue"
+                      />
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="CHARGES"
+                      android:textSize="16dp"
+                      android:textStyle="bold"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/yellow"
+                      />
+
+              </LinearLayout>
+
+              <FrameLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:id="@+id/recycleView_comp_chares"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+
+
+              <TextView
+                      android:id="@+id/textView_no_data"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="No Data Available"
+                      android:textSize="21dp"
+                      android:textColor="@color/black"
+                      android:textStyle="bold"
+                      android:layout_margin="15dp"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:visibility="gone"
+                      />
+
+              </FrameLayout>
+
+
+              <LinearLayout
+                  android:id="@+id/kucj"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  >
+
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="15dp"
+                      >
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      >
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Director"
+                          android:textSize="16dp"
+                          android:textColor="@color/dark_blue"
+                          android:textStyle="bold"
+                          />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Details"
+                          android:textSize="16dp"
+                          android:layout_marginStart="5dp"
+                          android:textColor="@color/yellow"
+                          android:textStyle="bold"
+                          />
+
+
+                  </LinearLayout>
+
+
+
+                  </RelativeLayout>
+
+
+
+                  <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                          <androidx.recyclerview.widget.RecyclerView
+                              android:id="@+id/recycleView_dir_det"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              />
+
+                      </LinearLayout>
+
+
+                  <ImageView
+                      android:layout_width="100dp"
+                      android:layout_height="80dp"
+                      android:layout_gravity="center"
+                      android:src="@drawable/final_app_icon"
+                      />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="www.companyAdda.com"
+                      android:textColor="@color/black"
+                      android:layout_gravity="center"
+                      android:layout_marginBottom="10dp"
+                      android:gravity="center"
+                      />
+
+
+              </LinearLayout>
+
+          </LinearLayout>
+
+      </ScrollView>
+
+
+  </LinearLayout>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ver_light_grey"
+    tools:context=".Activities.CheckPF">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_round_arrow_back_ios_24"
+                android:onClick="back"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:onClick="send_home"
+                android:src="@drawable/spplash_app_icon" />
+
+            <ImageView
+                android:id="@+id/notification_bell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:onClick="noti"
+                android:visibility="gone"
+                android:src="@drawable/ic_round_notifications_none_24"
+                />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:max="100"
+                android:visibility="gone"
+                android:progress="0" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Check PF"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="21sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        />
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:lottie_rawRes="@raw/money_grow"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:textSize="12dp"
+                        android:text="Missed Call EPF members can also check their balance by giving a missed call to 011-22901406 from their registered mobile number. "
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" However, the employee’s Permanent Account Number (PAN), Aadhaar, and bank account number must be linked with their UAN in order to avail this service. In case the above details are not linked with the UAN, the employee can request the employer to link them."
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OR"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="SMS Service In case employees have activated their UAN, they can send an SMS to 7738299899 to check their PF balance and the last contribution."
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:layout_margin="5dp"
+                        /><TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" The format that the SMS should be sent in is EPFOHO UAN ENG. The preferred language that the employee would like to receive the details in is the last three letters. Currently, the facility is available in Bengali, Malayalam, Tamil, Telugu, Kannada, Marathi, Gujarati, Punjabi, Hindi, and English. In case the employee wants the PF details in Kannada, the format the SMS must be sent in is EPFOHO UAN KAN. However, the PAN, Aadhaar, and bank details of the employee must be linked to the UAN for the employees to avail these services."
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                    android:textSize="12dp"
+                        android:layout_margin="5dp"
+                        />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/cardView_call"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="35dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardBackgroundColor="@color/yellow"
+                        android:layout_height="40dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Missed Call"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:lottie_rawRes="@raw/call_phone"
+                                app:lottie_autoPlay="true"
+                                android:layout_marginStart="10dp"
+                                app:lottie_loop="true"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- image viwer to view the images -->
+    <ImageView
+        android:id="@+id/imageViewMain"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/material_button_start"
+            android:layout_gravity="bottom|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="20dp"
+            android:text="  Get Started   "
+            android:textAllCaps="false"
+            android:textSize="21sp"
+            app:strokeColor="@color/black"
+            app:backgroundTint="@color/black"
+            style="@style/AppTheme.RoundedCornerMaterialButton"/>
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

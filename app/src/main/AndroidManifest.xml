@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.company.companyadda">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:remove="android:maxSdkVersion" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CompanyAdda"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Activities.ConteientList"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.CovidIndia"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.CheckEfileStatus"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.TDS_Return_Filling"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.PainDetails"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.PanValid"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.ChatBoot"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.FeedBack"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Feedback"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.SettingPin"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.ForgetPinPassword"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.ForgitLockPin"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.LockScreen"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.RTI"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.DocUpload"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.UploadDoc"
+            android:exported="true"
+            android:label="@string/title_activity_upload_doc"
+            android:theme="@style/Theme.CompanyAdda.NoActionBar" />
+        <activity
+            android:name=".Activities.CheckPF"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.IncomeTaxFilling"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.ROC"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.GST"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.LLP"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.CompanyRegister"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.PaymentDetailsScreen"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.NoInternet"
+            android:exported="true" />
+        <activity android:name=".Activities.PaymentDone" />
+        <activity android:name=".Activities.Director_Related_comp" />
+        <activity android:name=".Activities.WebTrial" />
+        <activity android:name=".Activities.SearchCompmayList" />
+        <activity android:name=".Activities.PanValidation" />
+        <activity
+            android:name=".Activities.Payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Company_search"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Contact_us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Raise_a_query"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.History_trans"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Wallet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Refer_earn"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="companyadda.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.Term_contition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Privacy_policy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.About_Us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.My_request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Our_partners"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Offers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Request_successfully"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Fill_form"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activities.Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.New_service"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Notification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DashBoard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activities.Language"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.City_select"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Otp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".Activities.SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Intro_Slider"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".FirebaseMessageReceiver">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

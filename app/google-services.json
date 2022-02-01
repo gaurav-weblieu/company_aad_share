@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "762264100263",
+    "project_id": "company-adda-940df",
+    "storage_bucket": "company-adda-940df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762264100263:android:1ed65ba5e75efe2afb6a82",
+        "android_client_info": {
+          "package_name": "com.company.companyadda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762264100263-4dddgoglmo4uo5hn1n3mq167kuef247b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWF8Jh0Q6UwQ4pjSstFZxIVbLoPj1xxXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762264100263-4dddgoglmo4uo5hn1n3mq167kuef247b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

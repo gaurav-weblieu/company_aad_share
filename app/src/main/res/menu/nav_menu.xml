@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        app:showAsAction="always"
+        android:icon="@drawable/home_image_icon"
+        />
+
+    <item
+        android:id="@+id/request"
+        android:title="My Request"
+        app:showAsAction="always"
+        android:icon="@drawable/request_image_icon"
+        />
+
+    <item
+        android:id="@+id/wallet"
+        android:title="Wallet"
+        app:showAsAction="always"
+        android:icon="@drawable/wallet_image_icon"
+        />
+
+    <item
+        android:id="@+id/gst_by_pan"
+        android:title="GST by PAN"
+        app:showAsAction="always"
+        android:icon="@drawable/payment_image_icon"
+        />
+
+    <item
+        android:id="@+id/income_tax"
+        android:title="Income Tax Challen Payment"
+        app:showAsAction="always"
+        android:icon="@drawable/payment_image_icon"
+        />
+
+    <item
+        android:id="@+id/history"
+        android:title="Pan Validation"
+        app:showAsAction="always"
+        android:icon="@drawable/term_cod_image_icon"
+        />
+
+    <item
+        android:id="@+id/refund"
+        android:title="Refund Status"
+        app:showAsAction="always"
+        android:icon="@drawable/refund_image"
+        />
+
+    <item
+        android:id="@+id/offers"
+        android:title="Offers"
+        app:showAsAction="always"
+        android:icon="@drawable/offer_image_icon"
+        />
+
+    <item
+        android:id="@+id/partners"
+        android:title="Partners"
+        app:showAsAction="always"
+        android:icon="@drawable/partners_image_icon"
+        />
+
+    <item
+        android:id="@+id/refer"
+        android:title="Refer and Earn"
+        app:showAsAction="always"
+        android:icon="@drawable/refer_earn_icon"
+        />
+
+    <item
+        android:id="@+id/term"
+        android:title="Term and Conditions"
+        app:showAsAction="always"
+        android:icon="@drawable/term_cod_image_icon"
+        />
+
+    <item
+        android:id="@+id/about"
+        android:title="About Us"
+        app:showAsAction="always"
+        android:icon="@drawable/about_us_image_icon"
+        />
+
+    <item
+        android:id="@+id/contact_us"
+        android:title="Contact Us"
+        app:showAsAction="always"
+        android:icon="@drawable/contact_us"
+        />
+
+
+
+    <item
+        android:id="@+id/raise_a_query"
+        android:title="Raise a Query"
+        app:showAsAction="always"
+        android:icon="@drawable/raise_a_query_icon"
+        />
+
+
+
+
+
+    <item
+        android:id="@+id/privacy"
+        android:title="Privacy Policy"
+        app:showAsAction="always"
+        android:icon="@drawable/privacy_policy_icon"
+        />
+
+    <item
+        android:id="@+id/log_out"
+        android:title="Log Out"
+        app:showAsAction="always"
+        android:icon="@drawable/log_out"
+        />
+
+</menu>

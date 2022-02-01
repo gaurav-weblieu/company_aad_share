@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.LLPFive">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+
+       <TextView
+           android:textColor="@color/black"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="FAQ "
+           android:textSize="16dp"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="15dp"
+           android:layout_marginBottom="15dp"
+           android:textStyle="bold"
+           />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Ques: "
+               android:textStyle="bold"
+               />
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="5dp"
+               android:text="What are the documents required for LLP?"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Ans: "
+               android:textStyle="bold"
+               />
+
+           <TextView
+               android:justificationMode="inter_word"
+
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="5dp"
+               android:text="The documents required are mentioned below:
+\n•	PAN Card of the Partners.
+\n•	Address Proof of the Partners.
+\n•	Utility Bill of the proposed Registered Office of the LLP to verify the address of the company where the Govt documents will be sent
+\n•	No-Objection Certificate from the Landlord must be submitted.
+\n•	Rental Agreement Copy between the LLP and the Landlord should be submitted specifying the time period till which the office shall be available for the business.
+"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Ques: "
+               android:textStyle="bold"
+               />
+
+           <TextView
+               android:justificationMode="inter_word"
+
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="5dp"
+               android:text="Can a person become a partner in LLP without any contribution?"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Ans: "
+               android:textStyle="bold"
+               />
+
+           <TextView
+               android:justificationMode="inter_word"
+
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="5dp"
+               android:text="Yes, a person can be made partner without contributing anything in the LLP provided they are solvent, i.e., has enough assets."
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Ques: "
+               android:textStyle="bold"
+               />
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="5dp"
+               android:justificationMode="inter_word"
+               android:text="How can I remove a partner from LLP?"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Ans: "
+               android:textStyle="bold"
+               />
+
+           <TextView
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="5dp"
+               android:justificationMode="inter_word"
+
+               android:text="You can remove a partner by obtaining the consent of other partners, which is followed by a change in the LLP Agreement and application to MCA to approve the changes."
+               />
+
+       </LinearLayout>
+
+
+
+   </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_start"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="@color/yellow"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Get Started"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
